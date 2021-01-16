@@ -1,0 +1,19 @@
+#!/bin/bash
+clear
+echo "helder will execute 5 Times"
+echo "Enter 5 Difrent Positions: "
+touch single_text
+rm single_text
+i=0
+while [ $i -lt 5 ]
+do
+  read h
+  echo "Number Of Reads (Coverage): " 
+  sh ./helder $h
+  sh ./helder $h >> single_text
+  i=$(( i + 1 ))
+done
+echo " "
+echo "You have a New single_text with the output :) "
+echo " "
+echo "Made by Helder Carapinha 201900228"
